@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   }
+.box{
+    border-radius: 1rem;
+    cursor:pointer;
+    transition: opacity 0.5s, transform 0.5s;
+}
+.box:hover{
+    opacity: 0.9;
+    transform: rotate(10deg) ;
+}
+    .box:active{
+        opacity: 0.6;
+        transform:  scale(0.8);
+}
+.cajamasgrande{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.caja_grande {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    
+    max-width: 1024px;
+}
+
+
+.caja1 {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.caja1>div {
+
+    height: 200px;
+
+}
+
+.caja1>div:nth-child(1) {
+    background-color: lightblue;
+}
+
+.caja1>div:nth-child(2) {
+    background-color: lightcoral;
+}
+
+.caja2 {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.subcajas {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.subcajas>div {
+    height: 200px;
+}
+
+.subcajas>div:nth-child(1) {
+    background-color: lightgreen;
+}
+
+.subcajas>div:nth-child(2) {
+    background-color: lightpink;
+}
+
+.subcajas>div:nth-child(3) {
+    background-color: lightsalmon;
+}
+
+.subcajas>div:nth-child(4) {
+    background-color: aquamarine;
+}
+
+.subcajas>div:nth-child(5) {
+    background-color: lightskyblue;
+}
+
+.subcajas>div:nth-child(6) {
+    background-color: blueviolet;
+}
+
+.caja_negra {
+    height: 200px;
+    background-color: black;
+}
+
+@media (min-width:600px) {
+    body {
+        background-color: red;
+
+        .caja1 {
+            flex-direction: row;
+        }
+
+        .caja1>div {
+            flex-basis: 50%;
+        }
+
+        .caja2 {
+            flex-direction: row;
+        }
+
+        .subcajas {
+            flex-basis: 60%;
+        }
+
+        .caja_negra {
+            flex-basis: 40%;
+            height: auto;
+        }
+    }
+}
+
+@media (min-width:800px) {
+    body {
+        background-color: green;
+    }
+
+    .subcajas {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .subcajas>div {
+        flex-basis: calc(50% - 0.5rem);
+    }
+}
+
+@media (min-width:1000px) {
+    body {
+        background-color: blue;
+    }
+
+    .subcajas {
+      width: 70%;
+    }
+.caja_negra{
+    width: 30%;
+}
+    .subcajas>div {
+        flex-basis: calc(33.3% - 0.666rem);
+    }
+}
